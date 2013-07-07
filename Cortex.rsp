@@ -3,6 +3,12 @@
 /r:System.Windows.Forms.dll
 /r:System.Data.dll
 /unsafe
+/D:LINQ
+/D:CURRYING
+/D:POLYNOMIAL_APPROXIMATION
+/D:MATH_FORMULA
+/D:STRING_EXTENSIONS
+/D:TESTING_EXTENSIONS
 
 /target:library
 AssemblyInfo.cs
