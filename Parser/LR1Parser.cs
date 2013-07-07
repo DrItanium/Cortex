@@ -49,12 +49,12 @@ namespace Cortex.Parsing
     public LR1ParsingTable ActionTable { get { return actionTable; } }
     public LR1GotoTable GotoTable { get { return gotoTable; } }
 
-    public LR1Parser(Grammar g, string terminateSymbol, SemanticRule r, bool supressMessages)
+    public LR1Parser(Cortex.Grammar.Grammar g, string terminateSymbol, SemanticRule r, bool supressMessages)
       : base(g, terminateSymbol, r, supressMessages, true) { }
-    public LR1Parser(Grammar g, string terminateSymbol, SemanticRule r) : this(g, terminateSymbol, r, false) { }
-    public LR1Parser(Grammar g, string terminateSymbol) : this(g, terminateSymbol, (x) => x[0]) { }
-    public LR1Parser(Grammar g) : this(g, DEFAULT_TERMINATE_SYMBOL) { }
-    public LR1Parser(Grammar g, string terminateSymbol, LR1ParsingTable table, LR1GotoTable gotoTable, SemanticRule r)
+    public LR1Parser(Cortex.Grammar.Grammar g, string terminateSymbol, SemanticRule r) : this(g, terminateSymbol, r, false) { }
+    public LR1Parser(Cortex.Grammar.Grammar g, string terminateSymbol) : this(g, terminateSymbol, (x) => x[0]) { }
+    public LR1Parser(Cortex.Grammar.Grammar g) : this(g, DEFAULT_TERMINATE_SYMBOL) { }
+    public LR1Parser(Cortex.Grammar.Grammar g, string terminateSymbol, LR1ParsingTable table, LR1GotoTable gotoTable, SemanticRule r)
       : base(g, terminateSymbol, r, true, false)
     {
       this.actionTable = table;
@@ -64,7 +64,7 @@ namespace Cortex.Parsing
       stateStack = new Stack<object>();
       initial = new LookaheadRule(TerminateSymbol, TargetGrammar[0]);
     }
-    public LR1Parser(Grammar g, LR1ParsingTable table, LR1GotoTable gotoTable, SemanticRule r) : this(g, DEFAULT_TERMINATE_SYMBOL, table, gotoTable, r) { }
+    public LR1Parser(Cortex.Grammar.Grammar g, LR1ParsingTable table, LR1GotoTable gotoTable, SemanticRule r) : this(g, DEFAULT_TERMINATE_SYMBOL, table, gotoTable, r) { }
     public override string RetrieveTables(Dictionary<string, string> symbolTable)
     {
       //C# representation of these tables	
