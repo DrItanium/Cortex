@@ -32,7 +32,7 @@ using System.Text;
 using System.Threading;
 using System.Globalization;
 
-namespace Cortex.Math
+namespace Cortex
 {
   public static partial class MathExtensions
   {

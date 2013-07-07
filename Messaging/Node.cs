@@ -65,7 +65,6 @@ namespace Cortex.Messaging
           break;
         case MessageOperationType.Failure:
           throw new ArgumentException(string.Format("Error: {0}", incoming.Value));
-          break;
         default:
           DispatchTo(incoming.Sender, ObjectID, MessageOperationType.Failure, "Invalid Action Given");
           break;

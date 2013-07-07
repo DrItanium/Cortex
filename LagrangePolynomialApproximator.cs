@@ -30,7 +30,7 @@ using System.Text;
 using System.Linq;
 using System.Collections.Generic;
 
-namespace Cortex.Math
+namespace Cortex
 {
 #if POLYNOMIAL_APPROXIMATION
   public class LagrangePolynomialApproximator : List<Tuple<decimal,decimal>>

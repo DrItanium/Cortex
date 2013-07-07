@@ -30,7 +30,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Cortex.Math
+namespace Cortex
 {
 #if MATH_FORMULA
   public static partial class MathExtensions

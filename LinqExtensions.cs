@@ -35,7 +35,7 @@ using System.IO;
 using System.Linq;
 
 
-namespace Cortex.Linq 
+namespace Cortex
 {
 #if LINQ
   public static partial class LinqExtensions 
